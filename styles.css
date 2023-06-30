@@ -154,13 +154,15 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about{
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
     
 }
+
+
 
 .section__subtitle--work {
     color: var(--clr-accent);
@@ -338,7 +340,7 @@ header {
     text-align: center;
 }
 
-.section__title--services {
+.section__title--services{
     color: var(--clr-accent);
     position: relative;
 }
@@ -419,17 +421,15 @@ header {
 
 /* My Work */
 
-.my-work {
+.my-work{
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center; 
-      
+    text-align: center;
 }
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    
 }
 
 .portfolio__item {
@@ -454,6 +454,251 @@ header {
     transform: scale(1.2);
     opacity: .5;
 }
+/* Skills  */
+
+.section__title--skills{
+    /* background-color: var(--clr-dark); */
+    text-align: center;
+}
+
+.my-skills{
+    /* background:linear-gradient(to right, #0f1a9b 20%,#a70a56 30%,#41a70a 40%,#1f1b1d 50%) ; */
+    border-radius: 10px;
+    /* background-image: url(./images/video.mp4); */
+}
+
+.skills-bar {
+    width: auto;
+    background: inherit;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    align-items: center;
+    color: whitesmoke;
+    margin-left: 10%;
+    margin-right:10%;
+    border-radius: 10px;
+    padding: 25px 30px;
+    height: 50px;
+}
+
+.skills-bar .bars {
+    margin: 20px 0;
+}
+
+.skills-bar .bars:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bars .info span {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+
+.skills-bar .bars .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bars .progressive-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+                    0px 1px  rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+
+    }
+
+}
+
+.bars .progressive-line.html span{
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(to right, #e34c26 10%,#f06529 45%, #000 85%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+.bars .progressive-line.css span{
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to right, #264de4 10%,#2965f1 45%, #ebebeb 85%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+.bars .progressive-line.js span{
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(to right, #F0DB4F 40%,#323330 85%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+.bars .progressive-line.git span{
+    height: 100%;
+    width: 55%;
+    background: linear-gradient(to right, #171515 40%,#121111 85%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+.bars .progressive-line.bootstrap span{
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(to right, #080135 50%,#602C50 60%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+.bars .progressive-line.fig span{
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to right, #0f1a9b 20%,#a70a56 30%,#41a70a 40%,#1f1b1d 50%,#0aa78f 60%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+.bars .progressive-line.py span{
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(to right, #4B8BBE 20%,#306998 30%,#FFE873 40%,#FFD43B 50%,#646464 90%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+.bars .progressive-line.rs span{
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, #7cc5d9 20%,#88dded 30%,#1c2c4c 40%,#4c768d 50%,#b4b7be 60%,#242443 70%);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+
+
+.progressive-line.fig span{
+   width: 80%;
+}
+.progressive-line.html span{
+   width: 70%;
+}
+.progressive-line.py span{
+    width: 40%;
+}
+.progressive-line.js span{
+    width: 70%;
+}
+.progressive-line.bootstrap span{
+    width: 60%;
+}
+.progressive-line.css span{
+    width: 80%;
+}
+.progressive-line.git span{
+    width: 55%;
+}
+.progressive-line.rs span{
+    width: 50%;
+}
+
+.bars .progressive-line span::before{
+    position: absolute;
+    right: 0;
+    top: -10px;
+    content:"";
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bars .progressive-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px 8px ;
+    border-radius: 4px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.progressive-line.fig span::after{
+    content: '80%';
+ }
+ .progressive-line.html span::after{
+    content: '70%';
+ }
+ .progressive-line.py span::after{
+     content: '40%';
+ }
+ .progressive-line.js span::after{
+     content: '70%';
+ }
+ .progressive-line.bootstrap span::after{
+    content: '60%';
+ }
+ .progressive-line.css span::after{
+     content: '80%';
+ }
+ .progressive-line.git span::after{
+     content: '55%';
+ }
+ .progressive-line.rs span::after{
+     content: '50%';
+ }
+
+
 
 
 /* footer */
