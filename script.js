@@ -25,3 +25,33 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   // Light mode is enabled
 }
 
+
+// for form 
+
+
+const btn = document.getElementsByClassName('.send-button');
+btn.addEventListener('click',(e) => {
+
+  e.preventDefault();
+
+  let name = document.getElementsByClassName('.name').value;
+  let email = document.getElementsByClassName('.email').value;
+  let message = document.getElementsByClassName('.message').value;
+  let subject = document.getElementsByClassName('.subject').value;
+  let body ='name: ' + name + '<br/> email: ' + email + '<br/> subject:' + subject + '<br/> message: ' + message;
+
+
+            Email.send({
+        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : body
+    }).then(
+      message => alert(message)
+);
+
+});
+
+
+
