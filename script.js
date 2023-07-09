@@ -26,7 +26,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 
-// for form 
+// for form
 
 
 const btn = document.getElementsByClassName('.send-button');
@@ -39,6 +39,7 @@ btn.addEventListener('click',(e) => {
   let message = document.getElementsByClassName('.message').value;
   let subject = document.getElementsByClassName('.subject').value;
   let body ='name: ' + name + '<br/> email: ' + email + '<br/> subject:' + subject + '<br/> message: ' + message;
+  document.getElementsByClassName('send-button').innerHTML = 'Thank You';
 
 
             Email.send({
