@@ -1,4 +1,24 @@
-var isWindows = navigator.platform.indexOf("Win") > -1;
+const toggle = document.getElementById('toggle');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    this.classList.toggle('bi-moon');
+    if(this.classList.toggle('bi-brightness-high-fill')){
+        body.style.background = 'white';
+        body.style.color = 'black';
+        body.style.transition = '1s';
+        // skills.style.background ='black'
+        // skills.style.color ='white'
+    }else{
+        body.style.background = '#061a10';
+        body.style.color = 'white';
+        body.style.transition = '1s';
+    }
+});
+
+
+
+
 
 const navToggle =document.querySelector('.nav-toggle')
 
@@ -14,19 +34,9 @@ navLinks.forEach(link => {
     })
 })
 
-// function myFunction() {
-//     var element = document.body;
-//     element.classList.toggle("dark-mode");
-//   }
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  // Dark mode is enabled
-} else {
-  // Light mode is enabled
-}
 
 
-// for form
+//form 
 
 
 const btn = document.getElementsByClassName('.send-button');
