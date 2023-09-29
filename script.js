@@ -52,7 +52,7 @@ btn.addEventListener('click',(e) => {
     var message = document.getElementById('message').value;
     var body = 'name: '+name +'<br/> email: ' + email +'<br/> subject: ' +subject + '<br/> message: '+ message;
     if (name == '' || email==''||subject=='' ||message==''){
-        // alert("Please fill all the fields");
+        alert("Please fill all the fields");
         return false;
     }
 
@@ -67,7 +67,8 @@ btn.addEventListener('click',(e) => {
     }).then(
         message => btn.innerText = 'Sending....',
          setTimeout(()=>{
-            btn.innerText='Sent'
+            btn.innerText='Sent',
+            btn.style.backgroundColor ='Green'
             paragraphMessage.innerText ='We will contact you shortly';
 
         },5000),
