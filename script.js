@@ -39,30 +39,41 @@ navLinks.forEach(link => {
 //form 
 
 
-const btn = document.getElementsByClassName('.send-button');
+var btn = document.getElementById('btn');
+var formToReset = document.getElementById('form');
+var paragraphMessage = document.getElementById('paragraphMessage')
+
+
 btn.addEventListener('click',(e) => {
+    message => btn.innerText = 'Sending....'
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+    var body = 'name: '+name +'<br/> email: ' + email +'<br/> subject: ' +subject + '<br/> message: '+ message;
+    if (name == '' || email==''||subject=='' ||message==''){
+        // alert("Please fill all the fields");
+        return false;
+    }
 
-  e.preventDefault();
-
-  let name = document.getElementsByClassName('.name').value;
-  let email = document.getElementsByClassName('.email').value;
-  let message = document.getElementsByClassName('.message').value;
-  let subject = document.getElementsByClassName('.subject').value;
-  let body ='name: ' + name + '<br/> email: ' + email + '<br/> subject:' + subject + '<br/> message: ' + message;
-  document.getElementsByClassName('send-button').innerHTML = 'Thank You';
 
 
-            Email.send({
-        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-        To : 'them@website.com',
-        From : "you@isp.com",
-        Subject : "This is the subject",
+    Email.send({
+        SecureToken : "5bfc486a-8ea2-4e9b-acdf-751aa0ed5aa1",
+        To : 'oyelakinakintunde04@gmail.com',
+        From : "oyelakinakintunde04@gmail.com",
+        Subject : "Contact Form",
         Body : body
     }).then(
-      message => alert(message)
-);
+        message => btn.innerText = 'Sending....',
+         setTimeout(()=>{
+            btn.innerText='Sent'
+            paragraphMessage.innerText ='We will contact you shortly';
 
-});
+        },5000),
+    formToReset.reset()
 
+    );
+    setTimeout("location.reload(true);", 10000);
 
-
+})
