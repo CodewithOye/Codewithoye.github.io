@@ -665,7 +665,7 @@ header {
     .contact-container{
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin-top: 20rem !important;
+        /* margin-top: 20rem !important; */
     }
 
     .map iframe{
