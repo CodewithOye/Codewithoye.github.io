@@ -67,7 +67,7 @@ btn.addEventListener('click',(e) => {
     }).then(
         message => btn.innerText = 'Sending....',
          setTimeout(()=>{
-            btn.innerText='Sent',
+            btn.innerText='Message Sent',
             btn.style.backgroundColor ='Green'
             paragraphMessage.innerText ='We will contact you shortly';
 
