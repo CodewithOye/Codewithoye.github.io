@@ -682,4 +682,28 @@ header {
         grid-template-columns: 50px 50px 50px;
         gap: 30px;
     }
+   
+}
+
+
+
+.scroll{
+    position: fixed;
+    background-color: #080135;
+    color: #fff;
+    bottom: 10px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 55px;
+    cursor: pointer;
+    opacity: 70%;
+    z-index: 99;
+    font-size: 30px;
+    align-items: center;
+
+}
+
+.scroll:hover{
+    background-color: #0aa78f;
+    border: none;
 }

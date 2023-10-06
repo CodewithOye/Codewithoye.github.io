@@ -78,3 +78,22 @@ btn.addEventListener('click',(e) => {
     setTimeout("location.reload(true);", 10000);
 
 })
+
+
+const scrollBtn = document.getElementById('scroll-btn');
+
+
+
+scrollBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+document.addEventListener('scroll', (e) => {
+    if(document.documentElement.scrollTop > 50){
+        scrollBtn.style.display ="block";
+    }else {
+        scrollBtn.style.display='none';
+    }
+
+});
