@@ -1,0 +1,25 @@
+.readme-img{
+  align-items: center;
+  border-radius: 20px;
+}
+
+.source{
+  color:rgba(1, 8, 22, 0.904);
+  border: none;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.click{
+  color: red;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+}
