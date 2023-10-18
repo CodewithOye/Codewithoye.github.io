@@ -90,7 +90,7 @@ scrollBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('scroll', (e) => {
-    if(document.documentElement.scrollTop > 50){
+    if(document.documentElement.scrollTop > 20){
         scrollBtn.style.display ="block";
     }else {
         scrollBtn.style.display='none';
