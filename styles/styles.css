@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -457,15 +459,16 @@ header {
 
 /* My Work */
 
-.my-work{
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    text-align: center;
-}
+
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item img {
+    height: 100%;
+    width: 100%;
 }
 
 .portfolio__item {
@@ -489,7 +492,7 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
-}
+} 
 /* Skills  */
 
 .section__title--skills{
@@ -716,47 +719,9 @@ header {
     border: none;
 }
 
+.my-work{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
 
-
-
-
-.container {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    border-style: none;
-  
-  }
-  
-   .portfolio-img{
-    width: 75%;
-    height: 75vh;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
-  } 
-  
-  .swiper{
-    width: 80%;
-    height: 80%;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
-  }
-  
-  .swiper-slide img{
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
-  }
-  
-  .swiper .swiper-button-prev, .swiper .swiper-button-next{
-    color: #fff;
-  }
-  
-  .swiper .swiper-pagination-bullet-active{
-    background: #fff;
-  }
