@@ -1,5 +1,9 @@
 const toggle = document.getElementById('toggle');
 const body = document.querySelector('body');
+const myService = document.querySelector('.my-services')
+const myWork = document.querySelector('.my-work')
+const co = document.querySelector('.co')
+const intro = document.querySelector('.section__subtitle')
 
 toggle.addEventListener('click', function(){
     this.classList.toggle('bi-moon');
@@ -7,12 +11,22 @@ toggle.addEventListener('click', function(){
         body.style.background = 'white';
         body.style.color = 'black';
         body.style.transition = '1s';
-        // skills.style.background ='black'
+        myService.style.backgroundColor='white';
+        myService.style.color='black';
+        myWork.style.backgroundColor="#fff"
+        myWork.style.color="black"
+        co.style.color="black"
+        intro.style.color='white'
+        // skills.style.background ='bla061a10ck'
         // skills.style.color ='white'
     }else{
         body.style.background = '#061a10';
         body.style.color = 'white';
         body.style.transition = '1s';
+        myService.style.backgroundColor='#061a10';
+        myWork.style.backgroundColor="#061a10"
+        myService.style.color='white';
+        co.style.color="white"
     }
 });
 

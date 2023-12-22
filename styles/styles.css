@@ -206,9 +206,16 @@ header {
     padding: 1em;
 }
 
-.logo img {
+.logo a{
     max-width: 100px;
     border-radius: 6rem;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.logo a span{
+    color: red;
 }
 
 .nav {
@@ -445,6 +452,7 @@ header {
         position: relative;
         z-index: 2;
     }
+    
 }
 
 /* My Work */
